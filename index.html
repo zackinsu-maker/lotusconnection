@@ -15,17 +15,64 @@
 </template>
 <x-dc>
 <helmet>
+<title>정보통신설비 성능점검 | 주식회사 로터스커넥션</title>
+<meta name="description" content="정보통신공사업법 법정 의무 성능점검 전문. 연면적 5,000㎡ 이상 건축물 대상 여부 무료 확인, 무료 방문견적, 유지보수·관리자 선임 지원. 문의 010-9216-1232" />
+<meta name="keywords" content="정보통신설비 성능점검, 정보통신설비 유지보수, 정보통신공사업법, 성능점검 대행, 유지보수관리자 선임, 로터스커넥션" />
+<link rel="canonical" href="https://lotuscon.kr/" />
+<meta name="robots" content="index, follow" />
+<meta name="naver-site-verification" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="주식회사 로터스커넥션" />
+<meta property="og:title" content="정보통신설비 성능점검 | 로터스커넥션" />
+<meta property="og:description" content="법정 의무 성능점검, 대상 여부 무료 확인 · 무료 방문견적 · 유지보수 선임 지원. 010-9216-1232" />
+<meta property="og:url" content="https://lotuscon.kr/" />
+<meta property="og:image" content="https://lotuscon.kr/lotuscon-logo.png" />
+<meta property="og:locale" content="ko_KR" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="lotuscon-logo.png" />
+<link rel="apple-touch-icon" href="lotuscon-logo.png" />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"주식회사 로터스커넥션","alternateName":"LOTUS CONNECTION","url":"https://lotuscon.kr/","email":"total@lotuscon.kr","telephone":"+82-10-9216-1232","image":"https://lotuscon.kr/lotuscon-logo.png","description":"정보통신설비 성능점검 및 유지보수·관리, 성능개선 컨설팅 전문 기업","address":{"@type":"PostalAddress","streetAddress":"가산디지털1로 2, 206호 (가산동, 우림라이온스밸리2차)","addressLocality":"금천구","addressRegion":"서울특별시","addressCountry":"KR"},"areaServed":"KR","priceRange":"무료 방문견적"}
+</script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { font-family: "Pretendard", -apple-system, sans-serif; color: #101a2b; background: #fff; -webkit-font-smoothing: antialiased; word-break: keep-all; }
+  html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+  @media (max-width: 1080px) { html { scroll-padding-top: 150px; } }
+  body { font-family: "Pretendard Variable", "Pretendard", -apple-system, sans-serif; color: #101a2b; background: #fff; -webkit-font-smoothing: antialiased; word-break: keep-all; }
   ::selection { background: #2563eb; color: #fff; }
   a { color: #2563eb; } a:hover { color: #1d4ed8; }
+  img { max-width: 100%; }
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.22,.61,.36,1), transform .8s cubic-bezier(.22,.61,.36,1); }
   .reveal.in { opacity: 1; transform: translateY(0); }
   @media (prefers-reduced-motion: reduce) { .reveal { transition: none; } }
+
+  #mobilecall { display: none; }
+  #anchorrow { display: none; }
+
+  @media (max-width: 1080px) {
+    .navlinks { display: none !important; }
+    #anchorrow { display: flex !important; }
+    #mobilecall { display: flex !important; }
+    .steparrow { display: none !important; }
+    body { padding-bottom: 76px; }
+    .g4 { grid-template-columns: repeat(2, 1fr) !important; }
+    .g3 { grid-template-columns: repeat(2, 1fr) !important; }
+    .g2 { grid-template-columns: 1fr !important; gap: 40px !important; }
+  }
+  @media (max-width: 720px) {
+    #headercta { display: none !important; }
+    section { padding-left: 20px !important; padding-right: 20px !important; }
+    section[id="hero"] { padding-top: 156px !important; padding-bottom: 80px !important; }
+    h1 { font-size: 36px !important; }
+    h2 { font-size: 27px !important; }
+    h3 { font-size: 19px !important; }
+    .g4, .g3, .g2, .gg { grid-template-columns: 1fr !important; gap: 16px !important; }
+    .stat3 { grid-template-columns: 1fr !important; }
+    .stat3 > div { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .tbl { font-size: 14px !important; }
+  }
 </style>
 </helmet>
 
@@ -35,29 +82,40 @@
       <a href="#top" style="display: inline-flex; align-items: center; text-decoration: none;">
         <img src="lotuscon-logo.png" alt="주식회사 로터스 커넥션" style="height: 54px; width: auto; display: block;" />
       </a>
-      <nav style="display: flex; align-items: center; gap: 28px;">
+      <div style="display: flex; align-items: center; gap: 28px;">
+      <nav class="navlinks" style="display: flex; align-items: center; gap: 28px;">
         <a href="#intro" style="font-size: 15.5px; font-weight: 600; text-decoration: none; color: #101a2b; letter-spacing: -.01em; transition: opacity .2s;" style-hover="opacity: .55">제도 안내</a>
         <a href="#target" style="font-size: 15.5px; font-weight: 600; text-decoration: none; color: #101a2b; letter-spacing: -.01em; transition: opacity .2s;" style-hover="opacity: .55">대상 확인</a>
         <a href="#scope" style="font-size: 15.5px; font-weight: 600; text-decoration: none; color: #101a2b; letter-spacing: -.01em; transition: opacity .2s;" style-hover="opacity: .55">점검 대상</a>
         <a href="#process" style="font-size: 15.5px; font-weight: 600; text-decoration: none; color: #101a2b; letter-spacing: -.01em; transition: opacity .2s;" style-hover="opacity: .55">점검 과정</a>
-        <a href="tel:01084499693" style="font-size: 15px; font-weight: 800; text-decoration: none; color: #fff; background: #1d4ed8; padding: 12px 24px; border-radius: 999px; letter-spacing: .01em; transition: background .2s;" style-hover="background: #0b2a75">📞 010-8449-9693</a>
       </nav>
+      <a id="headercta" href="tel:01092161232" style="flex-shrink: 0; font-size: 15px; font-weight: 800; text-decoration: none; color: #fff; background: #1d4ed8; padding: 12px 24px; border-radius: 999px; letter-spacing: .01em; transition: background .2s; white-space: nowrap;" style-hover="background: #0b2a75">📞 010-9216-1232</a>
+      </div>
+    </div>
+    <div id="anchorrow" style="border-top: 1px solid #e5ecf5; background: #f7fafd; gap: 22px; padding: 12px 20px; overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <sc-for list="{{ anchors }}" as="a" hint-placeholder-count="4">
+        <a href="{{ a.href }}" style="flex-shrink: 0; font-size: 14.5px; font-weight: 700; color: #34435c; text-decoration: none; letter-spacing: -.01em; white-space: nowrap; padding: 4px 0;">{{ a.label }}</a>
+      </sc-for>
     </div>
   </header>
 
+  <div id="mobilecall" style="position: fixed; bottom: 0; left: 0; width: 100%; z-index: 200; align-items: stretch; box-shadow: 0 -4px 20px rgba(11,21,38,.18);">
+    <a href="tel:01092161232" style="flex: 1.4; display: flex; align-items: center; justify-content: center; gap: 8px; background: #1d4ed8; color: #fff; text-decoration: none; padding: 19px 12px; font-size: 17px; font-weight: 800; letter-spacing: -.01em; min-height: 60px;">📞 무료 상담 010-9216-1232</a>
+    <a href="mailto:total@lotuscon.kr" style="flex: 1; display: flex; align-items: center; justify-content: center; background: #0b1526; color: #fff; text-decoration: none; padding: 19px 12px; font-size: 16px; font-weight: 700; letter-spacing: -.01em; min-height: 60px;">이메일 문의</a>
+  </div>
+
   <!-- HERO -->
-  <section style="position: relative; background: #0b1526; overflow: hidden; padding: 190px 32px 120px;">
-    <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, #0f1d33 0 22px, #0c1729 22px 44px); opacity: .9;"></div>
-    <div style="position: absolute; inset: 0; background: linear-gradient(105deg, rgba(9,17,33,.95) 0%, rgba(9,17,33,.65) 55%, rgba(9,17,33,.3) 100%);"></div>
-    <div style="position: absolute; top: 24px; right: 24px; font-family: monospace; font-size: 11px; color: rgba(255,255,255,.28); letter-spacing: .08em; text-align: right; line-height: 1.7; z-index: 0;">[ ict-hero.png ]<br/>통신실 랙 · 측정장비 이미지</div>
+  <section id="hero" style="position: relative; background: #0b1526; overflow: hidden; padding: 190px 32px 120px;">
+    <img src="images/ict-hero.png" alt="정보통신설비 성능점검 현장" fetchpriority="high" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 70% center;" />
+    <div style="position: absolute; inset: 0; background: linear-gradient(100deg, rgba(9,17,33,.96) 0%, rgba(9,17,33,.88) 42%, rgba(9,17,33,.55) 72%, rgba(9,17,33,.35) 100%);"></div>
     <div style="position: relative; z-index: 1; max-width: 1240px; margin: 0 auto;">
       <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: #7fb5ff; border: 1px solid rgba(127,181,255,.4); border-radius: 999px; padding: 9px 18px; margin-bottom: 34px;">✓ 정보통신설비 성능점검</span>
       <h1 style="font-size: 60px; line-height: 1.28; font-weight: 800; color: #fff; letter-spacing: -.03em; margin-bottom: 34px; max-width: 640px;">정보통신설비<br/><span style="color: #4d94ff;">측정</span>하고, <span style="color: #4d94ff;">진단</span>하고,<br/><span style="color: #4d94ff;">관리</span>하다.</h1>
       <p style="font-size: 18px; color: rgba(255,255,255,.75); line-height: 1.8; margin-bottom: 48px; font-weight: 500; max-width: 640px;">전문 기술인력과 측정장비를 기반으로 건축물 내 정보통신설비의 상태와 성능을 점검하고, 점검 결과에 따른 체계적인 관리 방향을 제시합니다.</p>
       <div style="display: flex; align-items: center; gap: 22px; flex-wrap: wrap;">
-        <a href="tel:01084499693" style="display: inline-flex; flex-direction: column; align-items: center; gap: 3px; background: #fff; color: #0b1526; text-decoration: none; border-radius: 999px; padding: 15px 36px;">
+        <a href="tel:01092161232" style="display: inline-flex; flex-direction: column; align-items: center; gap: 3px; background: #fff; color: #0b1526; text-decoration: none; border-radius: 999px; padding: 15px 36px;">
           <span style="font-size: 12.5px; font-weight: 600; color: #5a6b84;">무료 점검 진단 · 지금 전화 주세요</span>
-          <span style="font-size: 24px; font-weight: 800; letter-spacing: .01em;">📞 010-8449-9693</span>
+          <span style="font-size: 24px; font-weight: 800; letter-spacing: .01em;">📞 010-9216-1232</span>
         </a>
         <a href="#target" style="font-size: 16px; font-weight: 700; color: #fff; border: 1.5px solid rgba(255,255,255,.35); padding: 18px 34px; border-radius: 999px; text-decoration: none; transition: background .2s;" style-hover="background: rgba(255,255,255,.1)">우리 건물 대상인지 확인하기</a>
       </div>
@@ -67,7 +125,7 @@
   <!-- 제도 소개 -->
   <section id="intro" style="background: #eef3fa; padding: 110px 32px;">
     <div style="max-width: 1240px; margin: 0 auto;">
-      <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 60px; align-items: center;">
+      <div class="g2" style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 60px; align-items: center;">
         <div class="reveal">
           <p style="font-size: 15px; font-weight: 700; color: #2563eb; letter-spacing: .1em; margin-bottom: 18px;">NEW MANDATORY INSPECTION</p>
           <h2 style="font-size: 40px; font-weight: 800; line-height: 1.35; letter-spacing: -.03em; margin-bottom: 26px;">새로 생긴 의무 점검,<br/><span style="color: #2563eb;">놓치기 전에</span> 지금 준비하세요.</h2>
@@ -84,11 +142,11 @@
             </sc-for>
           </div>
         </div>
-        <div class="reveal" style="position: relative; aspect-ratio: 4/4.4; border-radius: 22px; background: repeating-linear-gradient(45deg, #dde7f3 0 18px, #d3dfee 18px 36px); display: flex; align-items: center; justify-content: center; box-shadow: 0 30px 70px -34px rgba(16,42,90,.4);">
-          <span style="font-family: monospace; font-size: 12px; color: #7488a3;">[ ict-intro.png ] · 점검 현장 사진</span>
+        <div class="reveal" style="position: relative; aspect-ratio: 16/11; border-radius: 22px; overflow: hidden; box-shadow: 0 30px 70px -34px rgba(16,42,90,.4);">
+          <img src="images/ict-photo-3.png" alt="CCTV 및 통신설비 현장 점검" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: 60% center; display: block;" />
         </div>
       </div>
-      <div class="reveal" style="display: grid; grid-template-columns: repeat(3, 1fr); background: #0b1526; border-radius: 18px; overflow: hidden; margin-top: 70px;">
+      <div class="reveal stat3" style="display: grid; grid-template-columns: repeat(3, 1fr); background: #0b1526; border-radius: 18px; overflow: hidden; margin-top: 70px;">
         <div style="padding: 30px 36px; text-align: center; border-right: 1px solid rgba(255,255,255,.1);">
           <p style="font-size: 14px; color: rgba(255,255,255,.55); font-weight: 600; margin-bottom: 8px;">점검 주기</p>
           <p style="font-size: 26px; font-weight: 800; color: #fff;">연 1회</p>
@@ -112,7 +170,7 @@
       <h2 class="reveal" style="font-size: 40px; font-weight: 800; letter-spacing: -.03em; margin-bottom: 24px;">우리 건물도 대상일까요?</h2>
       <p class="reveal" style="font-size: 17px; line-height: 1.8; color: #44546b; font-weight: 500; max-width: 860px; margin-bottom: 56px;">연면적 <strong style="color: #101a2b;">5,000㎡ 이상</strong> 건축물이 대상이며(공동주택·초중고 및 특수학교 제외), 건물 규모에 따라 의무 적용 시점이 <strong style="color: #101a2b;">연차별로 단계 시행</strong>됩니다. 전화 한 통이면 대상 여부를 무료로 확인해 드립니다.</p>
 
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-bottom: 64px;">
+      <div class="g3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-bottom: 64px;">
         <sc-for list="{{ phases }}" as="ph" hint-placeholder-count="3">
           <div class="reveal" style="position: relative; background: {{ ph.bg }}; border: 1.5px solid {{ ph.border }}; border-radius: 20px; padding: 36px 32px;">
             <sc-if value="{{ ph.now }}" hint-placeholder-val="{{ false }}">
@@ -148,7 +206,7 @@
       <p class="reveal" style="font-size: 15px; font-weight: 700; color: #2563eb; letter-spacing: .1em; margin-bottom: 18px;">SCOPE</p>
       <h2 class="reveal" style="font-size: 40px; font-weight: 800; letter-spacing: -.03em; margin-bottom: 16px;">주요 점검 대상</h2>
       <p class="reveal" style="font-size: 16px; color: #5a6b84; font-weight: 500; margin-bottom: 52px;">* 법정 점검 전체 항목 · 건축물 규모 및 용도에 따라 점검 대상 설비는 달라질 수 있습니다.</p>
-      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+      <div class="g4" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
         <sc-for list="{{ scopes }}" as="s" hint-placeholder-count="8">
           <div class="reveal" style="background: #fff; border: 1px solid #dde7f3; border-radius: 18px; padding: 32px 28px;">
             <div style="width: 52px; height: 52px; border-radius: 14px; background: #e3edfb; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
@@ -161,7 +219,7 @@
       </div>
       <div class="reveal" style="background: #fff; border: 1px solid #dde7f3; border-radius: 18px; padding: 38px 42px; margin-top: 28px;">
         <h3 style="font-size: 20px; font-weight: 800; color: #101a2b; margin-bottom: 22px;">주요 점검 대상 설비 (구내통신 기준)</h3>
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 32px;">
+        <div class="gg" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 32px;">
           <sc-for list="{{ facilities }}" as="f" hint-placeholder-count="6">
             <p style="display: flex; gap: 10px; align-items: center; font-size: 16px; font-weight: 600; color: #34435c;"><span style="color: #34d399; font-weight: 800;">✓</span> {{ f }}</p>
           </sc-for>
@@ -175,23 +233,23 @@
     <div style="max-width: 1240px; margin: 0 auto;">
       <p class="reveal" style="font-size: 15px; font-weight: 700; color: #2563eb; letter-spacing: .1em; margin-bottom: 18px;">PROCESS</p>
       <h2 class="reveal" style="font-size: 40px; font-weight: 800; letter-spacing: -.03em; margin-bottom: 56px;">성능 점검 과정</h2>
-      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 72px;">
+      <div class="g4" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 72px;">
         <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
           <div class="reveal" style="position: relative; background: #eef3fa; border: 1px solid #dde7f3; border-radius: 18px; padding: 34px 30px;">
             <p style="font-size: 34px; font-weight: 800; color: #c3d5ec; letter-spacing: -.02em; margin-bottom: 14px;">{{ s.n }}</p>
             <h3 style="font-size: 21px; font-weight: 800; color: #101a2b; margin-bottom: 10px; letter-spacing: -.01em;">{{ s.title }}</h3>
             <p style="font-size: 15px; color: #5a6b84; line-height: 1.65; font-weight: 500;">{{ s.desc }}</p>
             <sc-if value="{{ s.arrow }}" hint-placeholder-val="{{ false }}">
-              <span style="position: absolute; top: 50%; right: -17px; transform: translateY(-50%); z-index: 2; width: 28px; height: 28px; border-radius: 50%; background: #2563eb; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800;">→</span>
+              <span class="steparrow" style="position: absolute; top: 50%; right: -17px; transform: translateY(-50%); z-index: 2; width: 28px; height: 28px; border-radius: 50%; background: #2563eb; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800;">→</span>
             </sc-if>
           </div>
         </sc-for>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <div class="g3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
         <sc-for list="{{ photos }}" as="p" hint-placeholder-count="3">
           <figure class="reveal" style="border: 1px solid #dde7f3; border-radius: 18px; overflow: hidden; background: #fff;">
-            <div style="position: relative; aspect-ratio: 4/3; background: repeating-linear-gradient(45deg, #dde7f3 0 16px, #d3dfee 16px 32px); display: flex; align-items: center; justify-content: center;">
-              <span style="font-family: monospace; font-size: 11px; color: #7488a3;">{{ p.img }}</span>
+            <div style="position: relative; aspect-ratio: 4/3; overflow: hidden;">
+              <img src="{{ p.img }}" alt="{{ p.caption }}" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
             </div>
             <figcaption style="padding: 22px 26px; font-size: 16.5px; font-weight: 700; color: #101a2b; line-height: 1.55; letter-spacing: -.01em; text-align: center;">{{ p.caption }}</figcaption>
           </figure>
@@ -205,7 +263,7 @@
     <div style="max-width: 1240px; margin: 0 auto;">
       <p class="reveal" style="font-size: 15px; font-weight: 700; color: #4d94ff; letter-spacing: .1em; margin-bottom: 18px;">OUR PROMISE</p>
       <h2 class="reveal" style="font-size: 40px; font-weight: 800; letter-spacing: -.03em; color: #fff; margin-bottom: 56px;">로터스커넥션의 약속</h2>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-bottom: 28px;">
+      <div class="g3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-bottom: 28px;">
         <sc-for list="{{ values }}" as="v" hint-placeholder-count="3">
           <div class="reveal" style="background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); border-radius: 20px; padding: 40px 34px;">
             <div style="width: 54px; height: 54px; border-radius: 50%; background: rgba(77,148,255,.18); display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
@@ -216,7 +274,7 @@
           </div>
         </sc-for>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;">
+      <div class="g3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;">
         <sc-for list="{{ extras }}" as="e" hint-placeholder-count="3">
           <div class="reveal" style="display: flex; gap: 16px; align-items: flex-start; background: rgba(77,148,255,.08); border: 1px solid rgba(77,148,255,.25); border-radius: 16px; padding: 26px 28px;">
             <span style="flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: #34d399; color: #0b1526; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800;">✓</span>
@@ -236,7 +294,7 @@
       <h2 class="reveal" style="font-size: 38px; font-weight: 800; line-height: 1.4; letter-spacing: -.03em; margin-bottom: 20px;">무료 점검 진단 · 무료 방문견적,<br/>지금 바로 문의하세요.</h2>
       <p class="reveal" style="font-size: 17px; color: rgba(255,255,255,.8); margin-bottom: 44px; font-weight: 500;">정보통신설비 성능점검 | 유지보수·관리 | 성능개선 컨설팅</p>
       <div class="reveal" style="display: inline-flex; align-items: center; gap: 28px; flex-wrap: wrap; justify-content: center; margin-bottom: 44px;">
-        <a href="tel:01084499693" style="font-size: 34px; font-weight: 800; color: #fff; text-decoration: none; letter-spacing: .01em;">010-8449-9693</a>
+        <a href="tel:01092161232" style="font-size: 34px; font-weight: 800; color: #fff; text-decoration: none; letter-spacing: .01em;">010-9216-1232</a>
         <a href="mailto:total@lotuscon.kr" style="font-size: 16px; font-weight: 700; color: #1d4ed8; background: #fff; padding: 15px 32px; border-radius: 999px; text-decoration: none;">이메일 문의</a>
       </div>
       <div class="reveal" style="font-size: 15px; color: rgba(255,255,255,.72); line-height: 2; font-weight: 500;">
@@ -258,7 +316,7 @@
         <p>사업자등록번호 : {{ bizNo }}</p>
         <p>주소 : 서울특별시 금천구 가산디지털1로 2, 206호 (가산동, 우림라이온스밸리2차)</p>
         <p>Email : total@lotuscon.kr</p>
-        <p>TEL : 010-8449-9693</p>
+        <p>TEL : 010-9216-1232</p>
         <p>정보통신설비 성능점검 · 유지보수·관리 · 성능개선 컨설팅</p>
       </div>
       <p style="margin-top: 40px; font-size: 13px; color: rgba(255,255,255,.32);">© 2026 LOTUS CONNECTION. All rights reserved. · lotuscon.kr</p>
@@ -284,6 +342,12 @@ class Component extends DCLogic {
 
   renderVals() {
     return {
+      anchors: [
+        { label: "제도 안내", href: "#intro" },
+        { label: "대상 확인", href: "#target" },
+        { label: "점검 대상", href: "#scope" },
+        { label: "점검 과정", href: "#process" },
+      ],
       ceoName: this.props.ceoName ?? "정인수",
       bizNo: this.props.bizNo ?? "748-88-02734",
       promises: [
@@ -320,9 +384,9 @@ class Component extends DCLogic {
         { n: "04", title: "보고서 작성", desc: "점검기록 작성 및 성능개선 방향 제시", arrow: false },
       ],
       photos: [
-        { img: "[ ict-photo-1.png ]", caption: "측정장비를 활용한 정확한 성능 측정" },
-        { img: "[ ict-photo-2.png ]", caption: "통신실 및 랙 설비 상태 점검" },
-        { img: "[ ict-photo-3.png ]", caption: "CCTV 및 통신설비 현장 점검" },
+        { img: "images/ict-photo-1.png", caption: "측정장비를 활용한 정확한 성능 측정" },
+        { img: "images/ict-photo-2.png", caption: "통신실 및 랙 설비 상태 점검" },
+        { img: "images/ict-hero.png", caption: "전문 기술인력의 현장 점검" },
       ],
       values: [
         { icon: "👤", title: "전문성", desc: "현장 경험을 갖춘 전문 기술인력의 체계적인 점검을 제공합니다." },
